@@ -1,0 +1,17 @@
+[project]
+name = "ray-client-poc"
+version = "0.1.0"
+description = "Minimal Ray Client proof of concept managed by Pixi"
+authors = ["Codex"]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-64"]
+
+[dependencies]
+python = "3.11.*"
+pip = "*"
+
+[pypi-dependencies]
+ray = { version = ">=2.49.0,<3", extras = ["client"] }
+
+[tasks.client]
+cmd = "python -m app.client"
